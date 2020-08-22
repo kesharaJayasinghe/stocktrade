@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "287228819074",
+    "firebase_url": "https://stocktrade-auth.firebaseio.com",
+    "project_id": "stocktrade-auth",
+    "storage_bucket": "stocktrade-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287228819074:android:0b9fae5752dd5c91cd269b",
+        "android_client_info": {
+          "package_name": "com.keshjay.stocktrade.stocktrade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287228819074-6t4sbmldh5as1t1v5vf3dv8evnfrcv4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keshjay.stocktrade.stocktrade",
+            "certificate_hash": "d0b91227b8461033e1495985b0519b4ddb87d725"
+          }
+        },
+        {
+          "client_id": "287228819074-71thvmm7mugdu2h346k7f4h5hf3gsc3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzWH1pMqOfGiGm7Yk4FmGar16OTLcnL_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287228819074-71thvmm7mugdu2h346k7f4h5hf3gsc3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
