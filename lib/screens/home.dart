@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:stocktrade/screens/watchlist.dart';
 
 // class HomeScreen extends StatelessWidget {
 //   @override
@@ -74,10 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Center(child: Text("Watchlist")),
         elevation: 0,
         brightness: Brightness.dark,
-        leading: Icon(
-          Icons.exit_to_app,
+        leading: IconButton(
+          icon: Icon(Icons.exit_to_app),
+          iconSize: 28.0,
           color: Colors.lightBlue,
-          size: 28,
+          onPressed: () {},
         ),
         actions: [
           Padding(
@@ -92,10 +94,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Container(
-        padding: EdgeInsets.fromLTRB(15, 30, 0, 0),
-        child: Text("Welcome to Home Screen"),
-      ),
+      body: WatchList(),
+      // body: Container(
+      //   padding: EdgeInsets.fromLTRB(15, 30, 0, 0),
+      //   child: Text("Welcome to Home Screen"),
+      // ),
       bottomNavigationBar: Container(
         height: 50,
         decoration: BoxDecoration(

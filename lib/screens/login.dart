@@ -36,25 +36,43 @@ class _BodyState extends State<Body> {
   }
 
   Widget googleLoginButton() {
-    return OutlineButton(
-      onPressed: this.click,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),
-      splashColor: Colors.grey,
-      borderSide: BorderSide(color: Colors.white),
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image(image: AssetImage('assets/google_logo.png'), height: 27),
-            Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: Text('Sign in with Google',
-                    style: TextStyle(color: Colors.lightBlue, fontSize: 18)))
-          ],
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          Icons.account_balance,
+          size: 90.0,
+          color: Colors.lightBlue,
         ),
-      ),
+        const SizedBox(height: 15.0),
+        Image(
+          height: 50.0,
+          image: AssetImage('assets/stocktrade_logo.png'),
+        ),
+        const SizedBox(height: 60.0),
+        OutlineButton(
+          onPressed: this.click,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),
+          splashColor: Colors.grey,
+          borderSide: BorderSide(color: Colors.blueAccent),
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image(image: AssetImage('assets/google_logo.png'), height: 27),
+                Padding(
+                    padding: EdgeInsets.only(left: 15),
+                    child: Text('Sign in with Google',
+                        style:
+                            TextStyle(color: Colors.lightBlue, fontSize: 18)))
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 
