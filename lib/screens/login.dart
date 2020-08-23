@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:stocktrade/screens/home.dart';
+// import 'package:stocktrade/screens/home.dart';
+import 'package:stocktrade/tabs/pages/tabs_page.dart';
 import 'package:stocktrade/utils/firebase_auth.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -30,8 +31,8 @@ class _BodyState extends State<Body> {
   void click() {
     signInWithGoogle().then((user) => {
           this.user = user,
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => HomeScreen(user)))
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => TabPage()))
         });
   }
 
