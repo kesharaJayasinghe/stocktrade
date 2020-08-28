@@ -17,6 +17,39 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
   }
 
+  showAlertDialog(BuildContext context) {
+    Widget cancelButton = FlatButton(
+      color: Colors.black38,
+      child: Text("Cancel"),
+      onPressed: () {
+        Navigator.pop(context);
+      },
+    );
+    Widget confirmButton = FlatButton(
+      color: Colors.black38,
+      child: Text("Sign Out"),
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => LoginScreen()));
+      },
+    );
+    AlertDialog alert = AlertDialog(
+      backgroundColor: Color(0xff2c274c),
+      title: Text("Sign Out"),
+      content: Text("Are you sure you want to sign out of StockTrade?"),
+      actions: [
+        cancelButton,
+        confirmButton,
+      ],
+    );
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,19 +62,24 @@ class _HomeScreenState extends State<HomeScreen> {
           iconSize: 28.0,
           color: Colors.lightBlue,
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LoginScreen()));
+            showAlertDialog(context);
+            // Navigator.push(context,
+            //     MaterialPageRoute(builder: (context) => LoginScreen()));
           },
         ),
         actions: [
           Padding(
             padding: EdgeInsets.only(
-              right: 16,
+              right: 6,
             ),
-            child: Icon(
-              Icons.search,
+            child: IconButton(
+              icon: Icon(Icons.search),
               color: Colors.lightBlue,
-              size: 28,
+              iconSize: 28,
+              onPressed: () {
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => SearchScreen()));
+              },
             ),
           ),
         ],

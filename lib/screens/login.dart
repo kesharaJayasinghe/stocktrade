@@ -1,16 +1,12 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-// import 'package:stocktrade/screens/home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:stocktrade/tabs/pages/tabs_page.dart';
 import 'package:stocktrade/utils/firebase_auth.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        // appBar: AppBar(title: Center(child: Text('Login Screen'))),
-
-        body: Body());
+    return Scaffold(backgroundColor: Colors.black87, body: Body());
   }
 }
 
@@ -36,7 +32,7 @@ class _BodyState extends State<Body> {
         });
   }
 
-  Widget googleLoginButton() {
+  Widget loginScreenContent() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -79,6 +75,6 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    return Align(alignment: Alignment.center, child: googleLoginButton());
+    return Align(alignment: Alignment.center, child: loginScreenContent());
   }
 }

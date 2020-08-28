@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:stocktrade/screens/chart.dart';
+import 'package:stocktrade/screens/crypto.dart';
 import 'package:stocktrade/screens/home.dart';
 import 'package:stocktrade/screens/profile.dart';
 import 'package:stocktrade/screens/search.dart';
@@ -14,15 +14,16 @@ class TabPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
+        backgroundColor: Colors.black54,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.insert_chart),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_library),
+            icon: Icon(Icons.attach_money),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.description),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
@@ -35,10 +36,10 @@ class TabPage extends StatelessWidget {
             return HomeScreen(user);
             break;
           case 1:
-            return ChartScreen();
+            return CryptoCurrenPage();
             break;
           case 2:
-            return SearchScreen();
+            return NewsScreen();
             break;
           case 3:
             return ProfileScreen();

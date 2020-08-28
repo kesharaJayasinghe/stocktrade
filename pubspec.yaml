@@ -1,6 +1,7 @@
 name: stocktrade
-description: A new Flutter project.
+description: Stock trading application demo.
 
+# name: stocktrade
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -32,11 +33,19 @@ dependencies:
   firebase_auth: ^0.18.0+1
   google_sign_in: ^4.5.3
   http: ^0.12.2
+  syncfusion_flutter_charts: ^18.2.55
+  cloud_firestore: ^0.14.0+2
+  cached_network_image: ^2.3.1
+  flutter_launcher_icons: ^0.7.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  image_path: "assets/launch_icon.png"
+  android: true
+  ios: true
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

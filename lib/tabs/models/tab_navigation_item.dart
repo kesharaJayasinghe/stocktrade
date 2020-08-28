@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:stocktrade/screens/chart.dart';
+import 'package:stocktrade/screens/crypto.dart';
 import 'package:stocktrade/screens/home.dart';
 import 'package:stocktrade/screens/profile.dart';
 import 'package:stocktrade/screens/search.dart';
@@ -19,15 +19,15 @@ class TabNavigationItem {
   static List<TabNavigationItem> get items => [
         TabNavigationItem(
           page: HomeScreen(user),
-          icon: Icon(Icons.home),
-        ),
-        TabNavigationItem(
-          page: ChartScreen(),
           icon: Icon(Icons.insert_chart),
         ),
         TabNavigationItem(
-          page: SearchScreen(),
-          icon: Icon(Icons.local_library),
+          page: CryptoCurrenPage(),
+          icon: Icon(Icons.attach_money),
+        ),
+        TabNavigationItem(
+          page: NewsScreen(),
+          icon: Icon(Icons.description),
         ),
         TabNavigationItem(
           page: ProfileScreen(),
